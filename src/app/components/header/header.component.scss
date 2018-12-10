@@ -1,0 +1,45 @@
+.header-container {
+  position: fixed;
+  background-color: #282828;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  font-family: 'Garamond', sans-serif;
+  font-size: 5vmin;
+  padding: 15px 40px;
+  color: #efefef;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu {
+  opacity: 1;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Garamond', sans-serif;
+  color: #777777;
+  font-size: 18px;
+
+  .menu-item {
+    margin: 0 15px;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #efefef;
+    }
+  }
+}
+
+.selected-menu-item {
+  color: #efefef;
+  border-bottom: 1px solid #efefef;
+  transition: border-bottom 1s;
+}
