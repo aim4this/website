@@ -1,10 +1,10 @@
 <div class="header-container">
 
-  <div routerLink="/home" class="logo">
+  <div routerLink="/home" class="logo no-select">
     <h1>mathis.</h1>
   </div>
 
-  <div class="menu">
+  <div class="menu no-select">
     <p *ngFor="let item of menuItems" [routerLink]="item.routerLink" routerLinkActive="selected-menu-item" class="menu-item">{{item.name}}</p>
   </div>
 
