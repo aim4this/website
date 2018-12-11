@@ -8,4 +8,12 @@
     <p *ngFor="let item of menuItems" [routerLink]="item.routerLink" routerLinkActive="selected-menu-item" class="menu-item">{{item.name}}</p>
   </div>
 
+  <div class="social no-select">
+    <button *ngFor="let item of socialItems" class="img-btn">
+      <a [href]="item.link" target="_blank">
+        <img [src]="item.src">
+      </a>
+    </button>
+  </div>
+
 </div>

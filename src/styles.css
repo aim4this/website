@@ -1,5 +1,7 @@
 body {
-  background-color: #3B3B3B; }
+  background-color: #3B3B3B;
+  margin: 0;
+  padding: 0; }
 
 @keyframes fadein {
   from {
@@ -34,5 +36,16 @@ body {
   background: none;
   border: none;
   padding: 0; }
+
+.overlay {
+  pointer-events: none;
+  animation: fadein 1s;
+  position: absolute;
+  width: 50%;
+  height: calc(100% - 80px);
+  right: 0;
+  background-color: #242423;
+  opacity: 0.2;
+  z-index: 10; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -11,7 +11,7 @@
 .logo {
   position: absolute;
   padding: 15px 0;
-  left: 25px;
+  margin: 0 25px;
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
@@ -26,22 +26,21 @@
     margin: 0; }
 
 .menu {
-  opacity: 1;
-  position: absolute;
-  right: 25px;
+  position: relative;
   top: 50%;
+  text-align: center;
   transform: translateY(-50%);
   font-family: 'Garamond', sans-serif;
   animation: fade_in 2s;
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
+  opacity: 1;
   color: #777777; }
   .menu .menu-item {
     cursor: pointer;
     outline: none;
-    display: inline-block; }
-    .menu .menu-item:not(:last-child) {
-      margin-right: 25px; }
+    display: inline-block;
+    margin: 0 12px; }
     .menu .menu-item:after {
       content: '';
       display: block;
@@ -60,7 +59,18 @@
     width: 100% !important;
     opacity: 1 !important; }
 
-@media screen and (max-width: 460px) {
+.social {
+  position: absolute;
+  right: 25px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%); }
+  .social img {
+    height: 20px; }
+  .social button:not(:last-child) {
+    margin-right: 15px; }
+
+@media screen and (max-width: 500px) {
   .logo {
     text-align: center;
     left: 0;
@@ -75,6 +85,10 @@
     text-align: center;
     margin-right: 0;
     transform: translateY(-80%);
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .social {
+    visibility: hidden;
+    display: none; } }
 
 /*# sourceMappingURL=header.component.css.map */
