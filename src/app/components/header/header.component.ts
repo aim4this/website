@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
     {name: 'home', routerLink: '/home'},
     {name: 'work', routerLink: '/work'},
     {name: 'about', routerLink: '/about'},
-    {name: 'contact', routerLink: '/contact'},
+    {name: 'contact', routerLink: '/contact'}
   ];
 
   constructor() { }

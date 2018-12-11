@@ -1,6 +1,9 @@
+$primaryColor: #242423;
+$secondaryColor: #3B3B3B;
+$fontColor: #EFEFEF;
+
 body {
-  background: url('./assets/images/background.png') no-repeat center center fixed;
-  background-size: cover;
+  background-color: $secondaryColor;
 }
 
 @keyframes fadein {
@@ -24,4 +27,12 @@ body {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+}
+
+.img-btn {
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }

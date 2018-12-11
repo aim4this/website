@@ -1,3 +1,13 @@
 <div class="footer-container">
+  <div class="text">
+    <p>© 2018 Mathis Hellensberg</p>
+  </div>
 
+  <div class="social">
+    <button *ngFor="let item of socialItems" class="img-btn">
+      <a [href]="item.link" target="_blank">
+        <img [src]="item.src">
+      </a>
+    </button>
+  </div>
 </div>

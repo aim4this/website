@@ -2,30 +2,38 @@
   position: fixed;
   background-color: #282828;
   width: 100%;
+  height: 80px;
   opacity: 0.98;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-family: 'Garamond', sans-serif;
-  font-size: 5vmin;
+  position: absolute;
   padding: 15px 0;
-  margin-left: 10%;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-block;
-  color: #efefef;
   animation: fade_in 2s;
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   cursor: pointer;
   outline: none;
+
+  h1 {
+    font-family: 'Garamond', sans-serif;
+
+    color: #efefef;
+    margin: 0;
+  }
 }
 
 .menu {
   opacity: 1;
   position: absolute;
-  margin-right: 10%;
-  right: 0;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
   font-family: 'Garamond', sans-serif;
@@ -33,13 +41,15 @@
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   color: #777777;
-  font-size: 18px;
 
   .menu-item {
-    margin: 0 15px;
     cursor: pointer;
     outline: none;
     display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
 
     &:after {
       content: '';
@@ -47,7 +57,7 @@
       width: 0;
       height: 1px;
       opacity: 0;
-      background: #efefef;
+      background: #B40024;
       transition: 0.5s;
     }
 
@@ -70,18 +80,20 @@
 @media screen and (max-width: 460px) {
   .logo {
     text-align: center;
+    left: 0;
     width: 100%;
-    font-size: 10vmin;
     margin-bottom: 30px;
-    margin-left: 0;
+    transform: translateY(-80%);
   }
 
   .menu {
-    top: 80%;
+    top: 90%;
     width: 100%;
     right: 0;
     text-align: center;
     margin-right: 0;
+    transform: translateY(-80%);
+    font-size: 16px;
   }
 }
 

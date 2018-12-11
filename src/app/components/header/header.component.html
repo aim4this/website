@@ -1,11 +1,11 @@
 <div class="header-container">
 
   <div routerLink="/home" class="logo">
-    mathis.
+    <h1>mathis.</h1>
   </div>
 
   <div class="menu">
-    <div *ngFor="let item of menuItems" [routerLink]="item.routerLink" routerLinkActive="selected-menu-item" class="menu-item">{{item.name}}</div>
+    <p *ngFor="let item of menuItems" [routerLink]="item.routerLink" routerLinkActive="selected-menu-item" class="menu-item">{{item.name}}</p>
   </div>
 
 </div>
