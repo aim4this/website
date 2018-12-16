@@ -1,20 +1,35 @@
+@import './src/styles.scss';
+
 .contact-container {
   margin-top: 80px;
   animation: fadein 1s;
 
   .form {
     position: absolute;
-    width: calc(50% - 50px);
+    width: calc(50% - 100px);
     left: 0;
-    padding: 25px;
-    height: calc(100% - 130px);
+    padding: 50px;
     font-family: 'Roboto', sans-serif;
 
+    .email {
+      width: calc(50% - 10px);
+      display: inline-block;
+      padding-right: 10px;
+    }
+
+    .phone {
+      width: calc(50% - 10px);
+      display: inline-block;
+      padding-left: 10px;
+    }
+
     label {
-      color: #999999;
+      color: $white;
       width: 100%;
       margin: 25px 0;
-      font-size: 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
     }
 
     input {
@@ -24,9 +39,9 @@
       outline: none;
       margin: 15px 0 25px 0;
       background-color: transparent;
-      border-bottom: 1px solid #999999;
-      font-size: 16px;
-      color: #EFEFEF;
+      border-bottom: 1px solid $orange;
+      font-size: 14px;
+      color: $white;
     }
 
     textarea {
@@ -38,36 +53,57 @@
       outline: none;
       margin: 15px 0 25px 0;
       background-color: transparent;
-      border-bottom: 1px solid #999999;
-      font-size: 16px;
-      color: #EFEFEF;
+      border-bottom: 1px solid $orange;
+      font-size: 14px;
+      color: $white;
+    }
+
+    h1 {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: lighter;
+      margin: 0 0 50px 0;
     }
 
     button {
-      width: 100%;
+      position: relative;
       height: 50px;
-      border: none;
-      background-color: #B40024;
-      color: #EFEFEF;
-      font-size: 14px;
+      width: 100px;
+      border: 1px solid $orange;
+      background-color: transparent;
+      color: $white;
+      font-size: 12px;
       outline: none;
       cursor: pointer;
+
+      .btn-text {
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 5px;
+        margin-left: 5px; //because of letter-spacing
+      }
+
+      &:hover {
+      }
     }
   }
 
   iframe {
+    opacity: 0.5;
     animation: fadein 1s;
     position: absolute;
     width: 50%;
     height: calc(100% - 80px);
     right: 0;
-    margin: 0;
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 500px) {
   .form {
-    width: calc(100% - 50px);
+    width: calc(100% - 50px) !important;
   }
 
   iframe {
@@ -78,17 +114,5 @@
   .overlay {
     visibility: hidden;
     display: none;
-  }
-
-  input {
-    font-size: 12px !important;
-  }
-
-  label {
-    font-size: 12px !important;
-  }
-
-  textarea {
-    font-size: 12px !important;
   }
 }

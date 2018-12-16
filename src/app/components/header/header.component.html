@@ -1,6 +1,6 @@
 <div class="header-container">
 
-  <div routerLink="/home" class="logo no-select">
+  <div [routerLink]="'/home'" class="logo no-select">
     <h1>mathis.</h1>
   </div>
 
@@ -9,11 +9,14 @@
   </div>
 
   <div class="social no-select">
-    <button *ngFor="let item of socialItems" class="img-btn">
+
+    <div *ngFor="let item of socialItems" class="social-item tooltip">
+      <span class="tooltiptext">{{item.name}}</span>
       <a [href]="item.link" target="_blank">
-        <img [src]="item.src">
+        <img [src]="item.src" class="">
       </a>
-    </button>
+    </div>
+
   </div>
 
 </div>

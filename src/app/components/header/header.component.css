@@ -4,6 +4,7 @@
   width: 100%;
   height: 80px;
   opacity: 0.98;
+  animation: floatdown 1s;
   top: 0;
   left: 0;
   z-index: 100; }
@@ -15,13 +16,16 @@
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
-  animation: fade_in 2s;
-  -webkit-animation: fadein 2s;
-  -moz-animation: fadein 2s;
+  animation: fade_in 3s;
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
   cursor: pointer;
   outline: none; }
   .logo h1 {
+    font-size: 36px;
+    letter-spacing: 5px;
     font-family: 'Garamond', sans-serif;
+    font-weight: lighter;
     color: #efefef;
     margin: 0; }
 
@@ -30,10 +34,13 @@
   top: 50%;
   text-align: center;
   transform: translateY(-50%);
-  font-family: 'Garamond', sans-serif;
-  animation: fade_in 2s;
-  -webkit-animation: fadein 2s;
-  -moz-animation: fadein 2s;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+  animation: fade_in 3s;
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
   opacity: 1;
   color: #777777; }
   .menu .menu-item {
@@ -47,8 +54,9 @@
       width: 0;
       height: 1px;
       opacity: 0;
-      background: #B40024;
-      transition: 0.5s; }
+      background: #FFA700;
+      transition: 0.5s;
+      margin-top: 5px; }
     .menu .menu-item:hover {
       color: #efefef;
       transition: 0.3s; }
@@ -56,26 +64,56 @@
 .selected-menu-item {
   color: #efefef; }
   .selected-menu-item:after {
-    width: 100% !important;
+    width: calc(100% - 5px) !important;
     opacity: 1 !important; }
 
 .social {
   position: absolute;
   right: 25px;
-  height: 20px;
   top: 50%;
-  transform: translateY(-50%); }
-  .social img {
+  transform: translateY(-50%);
+  text-decoration: none; }
+
+.social-item {
+  display: inline-block;
+  margin-left: 15px; }
+  .social-item img {
     height: 20px; }
-  .social button:not(:last-child) {
-    margin-right: 15px; }
+
+.tooltip {
+  position: relative;
+  display: inline-block; }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, 50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase; }
+    .tooltip .tooltiptext:after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #181818 transparent; }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
 
 @media screen and (max-width: 500px) {
   .logo {
     text-align: center;
-    left: 0;
     width: 100%;
-    margin-bottom: 30px;
+    left: 0;
+    margin: 0 0 30px 0;
     transform: translateY(-80%); }
 
   .menu {
@@ -83,9 +121,11 @@
     width: 100%;
     right: 0;
     text-align: center;
-    margin-right: 0;
     transform: translateY(-80%);
-    font-size: 16px; }
+    font-size: 10px; }
+
+  .menu-item {
+    margin: 10px !important; }
 
   .social {
     visibility: hidden;

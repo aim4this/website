@@ -6,6 +6,7 @@ export interface MenuItem {
 }
 
 export interface SocialItem {
+  name: string;
   src: string;
   link: string;
 }
@@ -25,8 +26,8 @@ export class HeaderComponent implements OnInit {
   ];
 
   socialItems: SocialItem[] = [
-    {src: './assets/images/github.png', link: 'https://github.com/aim4this'},
-    {src: './assets/images/linkedin.png', link: 'https://www.linkedin.com/in/mathis-hellensberg-15b011a5/'}
+    {name: 'Github', src: './assets/images/github.png', link: 'https://github.com/aim4this'},
+    {name: 'LinkedIn', src: './assets/images/linkedin.png', link: 'https://www.linkedin.com/in/mathis-hellensberg-15b011a5/'}
   ];
 
   constructor() { }

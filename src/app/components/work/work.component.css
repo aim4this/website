@@ -3,12 +3,6 @@
   margin-top: 80px;
   animation: fadein 1s;
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 80px); }
 
-  .work {
-
-    .work-item {
-
-    }
-  }
-}
+/*# sourceMappingURL=work.component.css.map */

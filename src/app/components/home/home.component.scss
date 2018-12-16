@@ -1,3 +1,40 @@
+@import './src/styles.scss';
+
 .home-container {
-  margin: 100px;
+  position: relative;
+  margin-top: 80px;
+  animation: fadein 1s;
+  width: 100%;
+  height: calc(100% - 80px);
+}
+
+.box {
+  position: absolute;
+  border: 1px solid $orange;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  margin-top: 100px;
+  transform: translateX(-50%);
+}
+
+.text {
+  position: absolute;
+  color: $white;
+  width: 800px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  left: 50%;
+  margin-top: 150px;
+  transform: translateX(-50%);
+
+  h1 {
+    font-weight: normal;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
 }
