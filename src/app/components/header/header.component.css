@@ -7,7 +7,7 @@
   animation: floatdown 1s;
   top: 0;
   left: 0;
-  z-index: 100; }
+  z-index: 1; }
 
 .logo {
   position: absolute;
@@ -18,15 +18,15 @@
   display: inline-block;
   animation: fade_in 3s;
   -webkit-animation: fadein 3s;
-  -moz-animation: fadein 3s;
-  cursor: pointer;
-  outline: none; }
-  .logo h1 {
+  -moz-animation: fadein 3s; }
+  .logo .logo-text {
     font-size: 36px;
     letter-spacing: 5px;
     font-family: 'Garamond', sans-serif;
     font-weight: lighter;
     color: #efefef;
+    cursor: pointer;
+    outline: none;
     margin: 0; }
 
 .menu {
@@ -106,7 +106,8 @@
       border-style: solid;
       border-color: transparent transparent #181818 transparent; }
   .tooltip:hover .tooltiptext {
-    visibility: visible; }
+    visibility: visible;
+    animation: fadein 1s; }
 
 @media screen and (max-width: 500px) {
   .logo {
